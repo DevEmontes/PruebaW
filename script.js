@@ -6,15 +6,14 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
   const errorMessage = document.getElementById("errorMessage");
 
   if (!email || !password) {
-    errorMessage.textContent = "Por favor, completa todos los campos.";
+    errorMessage.textContent = "Completa todos los campos.";
     errorMessage.style.display = "block";
     return;
   }
 
-  // Simulación de autenticación
-  if (email === "admin@empresa.com" && password === "123456") {
+  if (email === "admin@luxapp.com" && password === "123456") {
     errorMessage.style.display = "none";
-    alert("Inicio de sesión exitoso ✔️");
+    alert("✨ Bienvenido, acceso concedido.");
     // window.location.href = "/dashboard";
   } else {
     errorMessage.textContent = "Correo o contraseña incorrectos.";

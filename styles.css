@@ -1,4 +1,4 @@
-/* Tipografía limpia y moderna */
+/* Estilo profesional con glassmorphism */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,98 +6,136 @@
 }
 
 body {
-  font-family: 'Inter', sans-serif;
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-  height: 100vh;
+  font-family: 'Outfit', sans-serif;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #333;
+  overflow: hidden;
+  padding: 1rem;
 }
 
-.wrapper {
-  background-color: #fff;
-  padding: 3rem 2.5rem;
-  border-radius: 18px;
+.background-blur {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: rgba(255, 255, 255, 0.05);
+  filter: blur(100px);
+  border-radius: 50%;
+  top: -100px;
+  left: -100px;
+}
+
+.login-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  border-radius: 20px;
+  padding: 2.5rem;
   width: 100%;
-  max-width: 400px;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease;
+  max-width: 420px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  z-index: 10;
+  animation: fadeIn 0.8s ease-out forwards;
+  color: #fff;
 }
 
-.form-title {
-  text-align: center;
-  font-weight: 600;
+.login-form h1 {
   font-size: 1.8rem;
-  color: #1a1a1a;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  text-align: center;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 0.95rem;
+  color: #ccc;
   margin-bottom: 2rem;
 }
 
-.form-group {
+.input-wrapper {
   margin-bottom: 1.5rem;
 }
 
-.form-group label {
-  font-weight: 500;
-  margin-bottom: 0.4rem;
+.input-wrapper label {
   display: block;
-  color: #444;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  color: #ddd;
 }
 
-.form-group input {
+.input-wrapper input {
   width: 100%;
-  padding: 0.75rem 1rem;
-  border: 1px solid #ddd;
-  border-radius: 10px;
+  padding: 0.8rem 1rem;
+  border-radius: 12px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
   font-size: 1rem;
-  background-color: #f9f9f9;
-  transition: border 0.3s ease;
+  transition: background 0.3s, transform 0.2s;
 }
 
-.form-group input:focus {
-  border-color: #4f46e5;
+.input-wrapper input:focus {
+  background-color: rgba(255, 255, 255, 0.2);
   outline: none;
-  background-color: #fff;
+  transform: scale(1.02);
 }
 
-.form-options {
+.options {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 0.9rem;
-  margin-bottom: 1.5rem;
+  font-size: 0.85rem;
+  margin-bottom: 2rem;
+  color: #ccc;
 }
 
-.form-options a {
-  color: #4f46e5;
+.options a {
   text-decoration: none;
+  color: #9ab;
+  transition: color 0.2s;
 }
 
-.form-options a:hover {
-  text-decoration: underline;
+.options a:hover {
+  color: #fff;
 }
 
 button {
   width: 100%;
   padding: 0.9rem;
-  background-color: #4f46e5;
-  color: white;
-  font-weight: 600;
   border: none;
-  border-radius: 10px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #fff;
   font-size: 1rem;
+  font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: transform 0.2s, box-shadow 0.3s;
 }
 
 button:hover {
-  background-color: #4338ca;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(118, 75, 162, 0.5);
 }
 
 .error-message {
-  margin-top: 1rem;
-  color: #d32f2f;
+  margin-top: 1.2rem;
+  color: #ff6b6b;
   text-align: center;
   display: none;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
+}
+
+@keyframes fadeIn {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
