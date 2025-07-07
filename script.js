@@ -6,17 +6,18 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
   const errorMessage = document.getElementById("errorMessage");
 
   if (!email || !password) {
-    errorMessage.textContent = "Todos los campos son obligatorios.";
+    errorMessage.textContent = "Por favor, completa todos los campos.";
     errorMessage.style.display = "block";
     return;
   }
 
-  // Simular autenticación (aquí va tu lógica real)
-  if (email === "admin@demo.com" && password === "123456") {
-    alert("Inicio de sesión exitoso");
-    // Redireccionar o continuar
+  // Simulación de autenticación
+  if (email === "admin@empresa.com" && password === "123456") {
+    errorMessage.style.display = "none";
+    alert("Inicio de sesión exitoso ✔️");
+    // window.location.href = "/dashboard";
   } else {
-    errorMessage.textContent = "Credenciales incorrectas.";
+    errorMessage.textContent = "Correo o contraseña incorrectos.";
     errorMessage.style.display = "block";
   }
 });

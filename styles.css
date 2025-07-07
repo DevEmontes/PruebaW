@@ -1,77 +1,103 @@
+/* Tipografía limpia y moderna */
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #4e54c8, #8f94fb);
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
   height: 100vh;
   display: flex;
-  justify-content: center;
   align-items: center;
-}
-
-.login-container {
-  background-color: #ffffff;
-  padding: 2.5rem;
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  width: 100%;
-  max-width: 380px;
-}
-
-.login-form h2 {
-  text-align: center;
-  margin-bottom: 1.5rem;
+  justify-content: center;
   color: #333;
 }
 
-.input-group {
-  margin-bottom: 1.2rem;
+.wrapper {
+  background-color: #fff;
+  padding: 3rem 2.5rem;
+  border-radius: 18px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
 }
 
-.input-group label {
-  display: block;
-  font-weight: bold;
+.form-title {
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.8rem;
+  color: #1a1a1a;
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  font-weight: 500;
   margin-bottom: 0.4rem;
+  display: block;
   color: #444;
 }
 
-.input-group input {
+.form-group input {
   width: 100%;
-  padding: 0.75rem;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  transition: border-color 0.3s;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+  transition: border 0.3s ease;
 }
 
-.input-group input:focus {
-  border-color: #4e54c8;
+.form-group input:focus {
+  border-color: #4f46e5;
   outline: none;
+  background-color: #fff;
+}
+
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-options a {
+  color: #4f46e5;
+  text-decoration: none;
+}
+
+.form-options a:hover {
+  text-decoration: underline;
 }
 
 button {
   width: 100%;
-  padding: 0.75rem;
-  background-color: #4e54c8;
-  color: #fff;
-  font-size: 1rem;
-  font-weight: bold;
+  padding: 0.9rem;
+  background-color: #4f46e5;
+  color: white;
+  font-weight: 600;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
+  font-size: 1rem;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: #3b40a4;
+  background-color: #4338ca;
 }
 
 .error-message {
-  color: red;
-  margin-top: 0.8rem;
+  margin-top: 1rem;
+  color: #d32f2f;
   text-align: center;
   display: none;
+  font-size: 0.95rem;
 }
